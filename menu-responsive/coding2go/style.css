@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("backgroundImage.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.781);
+  box-shadow: 3px 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+nav a:hover {
+  color: rgb(70, 69, 69);
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.425);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  backdrop-filter: blur(10px);
+}
+
+.side-bar li {
+  width: 100%;
+}
+
+.side-bar a {
+  width: 100%;
+}
+
+nav ul:last-child li:last-child {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  nav ul:last-child li:last-child {
+    display: block;
+  }
+}
+@media (max-width: 400px) {
+  .side-bar {
+    width: 100%;
+  }
+}
